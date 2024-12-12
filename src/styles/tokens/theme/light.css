@@ -1,0 +1,17 @@
+:root {
+    --color-primary: var(--color-red);
+    --color-secondary: var(--color-light-blue);
+    --color-secondary-light: var(--color-sky-blue);
+    --color-surface: var(--color-white);
+    --color-on-surface: var(--color-black);
+    --color-on-surface-light: var(--color-gray);
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+    border-radius: 50px;
+}

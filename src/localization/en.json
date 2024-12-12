@@ -1,0 +1,49 @@
+{
+    "search": {
+        "heading": "Track Your Order",
+        "subheading": "All order updates will be available through this link.",
+        "placeholder": "Tracking No."
+    },
+    "order": {
+        "heading": "Order",
+        "state": {
+            "pickedUp": {
+                "label": "Picked Up",
+                "short": "order.state.pickedUp.short",
+                "long": "Your order is created, Bosta will pick it up once your shipper is ready"
+            },
+            "processing": {
+                "label": "Processing",
+                "short": "Received at warehouse",
+                "long": "Order is received at Bosta warehouses and being processed"
+            },
+            "outForDelivery": {
+                "label": "Out for Delivery",
+                "short": "Out for Delivery",
+                "long": "Order is out for delivery"
+            },
+            "delivered": {
+                "label": "Delivered",
+                "short": "Delivered",
+                "long": "Your order was delivered"
+            },
+            "rescheduled": {
+                "label": "Rescheduled",
+                "short": "Your order was rescheduled",
+                "long": "Order is rescheduled as you were not reachable on the phone"
+            },
+            "preparingForDelivery": {
+                "label": "Preparing for Delivery",
+                "short": "Order is being prepared for delivery",
+                "long": "Order is being prepared for delivery"
+            },
+            "cancelled": {
+                "label": "Cancelled",
+                "short": "Cancelled",
+                "long": "Order is cancelled"
+            }
+        },
+        "deliveryTime": "Will be Deliverd from 10 AM to 6 PM According to the Courier Route",
+        "trackingDetails": "Tracking Details"
+    }
+}

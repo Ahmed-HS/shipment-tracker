@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(tokens/main.css);
+@layer tailwind-base, antd;
+@layer tailwind-base {
+    @tailwind base;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Poppins', sans-serif;
+    }
+    body {
+        font-family: 'Lato', sans-serif;
+    }
+}
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+    background-color: rgb(var(--color-secondary));
+    color: white;
+}
+
+.ant-steps-item-tail {
+    padding: 0;
+}
+
+.ant-steps-icon {
+    display: flex;
+    align-items: center;
+    background-color: rgb(var(--color-surface));
+    justify-content: center;
+    width: fit-content;
+}
+
+@media (min-width: 532px) {
+    .ant-steps-item-wait .ant-steps-item-tail::after,
+    .ant-steps-item-wait .ant-steps-item-tail::before {
+        background-image: url('/src/assets/dottedLine.svg');
+        background-color: rgb(var(--color-surface));
+        position: relative;
+        content: '';
+        height: 4px;
+    }
+
+    .ant-steps-item-wait .ant-steps-item-tail {
+        display: inline-block;
+    }
+
+    .ant-steps-item-wait:last-child .ant-steps-item-tail::after {
+        visibility: hidden;
+    }
+
+    .ant-steps-item-wait .ant-steps-item-tail::after {
+        margin-top: -20px;
+        width: calc(100%);
+    }
+
+    .ant-steps-item-wait .ant-steps-item-tail::before {
+        inset-inline-end: 50%;
+        display: inline-block;
+        width: calc(50%);
+    }
+}

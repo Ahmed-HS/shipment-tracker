@@ -1,0 +1,8 @@
+.dark {
+    --color-primary: var(--color-red);
+    --color-secondary: var(--color-light-blue);
+    --color-secondary-light: var(--color-sky-blue);
+    --color-surface: var(--color-dark-gray);
+    --color-on-surface: var(--color-offwhite);
+    --color-on-surface-light: var(--color-offwhite-dark);
+}
