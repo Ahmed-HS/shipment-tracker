@@ -4,9 +4,11 @@ import { OrderTimeline } from './components/OrderTimeline'
 import { Card, Skeleton } from 'antd'
 import { useTrackingStore } from './stores/trackingStore'
 import { useOrder } from './hooks/useOrder'
+import { tk } from '@localization/translationKeys'
 export function TrackingPage() {
     const { trackingNumberQuery } = useTrackingStore()
     const { isFetching, isError, data: order } = useOrder(trackingNumberQuery)
+    const { t } = useTranslation()
     return (
         <>
             <SearchBar />
@@ -22,9 +24,7 @@ export function TrackingPage() {
                 <Card className="mt-8">
                     <div className="m-4 flex items-center gap-2">
                         <IconIxErrorFilled className="text-secondary size-6" />
-                        <h2 className="text-xl">
-                            Please enter a valid tracking number
-                        </h2>
+                        <h2 className="text-xl">{t(tk.search.error)}</h2>
                     </div>
                 </Card>
             )}

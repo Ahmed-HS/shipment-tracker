@@ -7,7 +7,7 @@ export function SearchBar() {
     const { setTrackingNumberQuery } = useTrackingStore()
     const [searchValue, setSearchValue] = useState('')
     const { t } = useTranslation()
-    const inputRef = useRef<InputRef>()
+    const inputRef = useRef<InputRef>(null)
 
     return (
         <>

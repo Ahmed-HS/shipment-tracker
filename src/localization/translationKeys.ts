@@ -3,7 +3,8 @@ export const tk = {
     search: {
         heading: 'search.heading',
         subheading: 'search.subheading',
-        placeholder: 'search.placeholder'
+        placeholder: 'search.placeholder',
+        error: 'search.error'
     },
     order: {
         heading: 'order.heading',

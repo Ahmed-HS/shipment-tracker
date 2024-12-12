@@ -2,7 +2,8 @@
     "search": {
         "heading": "Track Your Order",
         "subheading": "All order updates will be available through this link.",
-        "placeholder": "Tracking No."
+        "placeholder": "Tracking No.",
+        "error": "Please enter a valid tracking number"
     },
     "order": {
         "heading": "Order",

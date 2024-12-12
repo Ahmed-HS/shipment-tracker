@@ -55,12 +55,12 @@ function handleStepsRTL(locale: string) {
     const sheet = document.styleSheets[0]
     if (locale === 'ar') {
         sheet.insertRule(
-            '.ant-steps-item-tail {inset-inline-start: calc(90%);}',
+            '@media (max-width: 532px) { .ant-steps-item-tail { inset-inline-start: calc(90%); } }',
             sheet.cssRules.length
         )
     } else {
         sheet.insertRule(
-            '.ant-steps-item-tail {inset-inline-start: 13px;}',
+            '@media (max-width: 532px) { .ant-steps-item-tail { inset-inline-start: 13px; } }',
             sheet.cssRules.length
         )
     }
