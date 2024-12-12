@@ -8,7 +8,6 @@ api.interceptors.request.use((config) => {
     config.headers['x-requested-by'] = 'Bosta'
     return config
 })
-
 const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
