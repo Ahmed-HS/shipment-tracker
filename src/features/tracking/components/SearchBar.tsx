@@ -1,12 +1,14 @@
-import { Input } from 'antd'
+import { Input, InputRef } from 'antd'
 import locationIcon from '@assets/location.png'
 import { useTrackingStore } from '../stores/trackingStore'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { tk } from '@localization/translationKeys'
 export function SearchBar() {
     const { setTrackingNumberQuery } = useTrackingStore()
     const [searchValue, setSearchValue] = useState('')
     const { t } = useTranslation()
+    const inputRef = useRef<InputRef>()
+
     return (
         <>
             <section className="bg-secondary-light flex w-full flex-col items-center pb-20">
@@ -17,6 +19,7 @@ export function SearchBar() {
                 <p>{t(tk.search.subheading)}</p>
             </section>
             <Input.Search
+                ref={inputRef}
                 size="large"
                 style={{
                     boxShadow:
@@ -24,7 +27,10 @@ export function SearchBar() {
                 }}
                 className="-mt-10 w-[calc(100%-2rem)] max-w-md rounded-xl"
                 placeholder={t(tk.search.placeholder)}
-                onSearch={() => setTrackingNumberQuery(searchValue)}
+                onSearch={() => {
+                    inputRef.current?.blur()
+                    setTrackingNumberQuery(searchValue)
+                }}
                 value={searchValue}
                 onChange={(e) => {
                     if (/^\d*$/.test(e.target.value)) {

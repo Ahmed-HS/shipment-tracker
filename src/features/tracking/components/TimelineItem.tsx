@@ -12,7 +12,13 @@ export function TimelineItem({ steps }: { steps: Step[] }) {
             </h3>
 
             {steps.map((step, index) => (
-                <Card key={index} style={{ width: 'fit-content' }}>
+                <Card
+                    key={index}
+                    style={{
+                        width: 'fit-content',
+                        maxWidth: 'calc(100% - 32px)'
+                    }}
+                >
                     <p>
                         {t(
                             stateToTranslationKey[step.code] + tk.modifiers.long
